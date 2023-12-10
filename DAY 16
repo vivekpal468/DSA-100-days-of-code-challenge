@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+void fun(int n)
+{
+    //base conditions
+    if(n==0) return ;
+    //infinte loop
+    cout<<"striver"<<endl;
+    fun(n-1);
+}
+int main() {
+int n;
+cin>>n;
+fun(n);
+
+}
