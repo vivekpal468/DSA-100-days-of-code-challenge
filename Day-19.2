@@ -1,0 +1,13 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int printSum(int arr[], int n)
+{
+    if(n==0) return arr[n];
+    return arr[n]+printSum(arr, n-1);   
+}
+int main() {
+    int arr[] = {8,6,7,2,6,4};
+    cout<<printSum(arr, 5);
+    return 0;
+}
