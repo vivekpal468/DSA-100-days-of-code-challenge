@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int pro(int arr[], int i, int n)
+{
+    if(i==n) return arr[i];
+    return arr[i]*pro(arr, i+1, n);
+}
+int main() {
+    int arr[] = {8,6,7};
+    cout<<pro(arr,0, 2);
+    return 0;
+}
