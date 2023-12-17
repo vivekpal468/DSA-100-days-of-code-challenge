@@ -1,0 +1,19 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int countVowel(string str, int ind)
+{
+
+   if(ind<0) return 0; 
+   if(str[ind] =='A' || str[ind] =='E' || str[ind] =='I' || str[ind] =='O' || str[ind] =='U') 
+   return 1+countVowel(str, ind-1);
+   
+   else
+   return countVowel(str, ind-1);
+}
+int main() {
+    string str="AMEMAMAMAMAAM";
+    cout<<countVowel(str, str.length());
+    return 0;
+}
