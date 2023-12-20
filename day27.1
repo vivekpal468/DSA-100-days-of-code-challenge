@@ -1,0 +1,24 @@
+class Solution {
+public:
+void subsequence(vector<int> &nums, int ind, int n,vector<int> &temp, vector<vector<int>> &ans)
+{
+    if(ind==n) 
+    {
+        ans.push_back(temp);
+        return ;
+    }
+    
+    //if we do not take
+    subsequence(nums, ind+1, n, temp, ans);
+    //if we take
+    temp.push_back(nums[ind]);
+    subsequence(nums, ind+1, n, temp, ans);
+    temp.pop_back();
+}
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<int> temp;
+        vector<vector<int>> ans;
+        subsequence(nums, 0, nums.size(), temp, ans);
+        return ans;
+    }
+};
